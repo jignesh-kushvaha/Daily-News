@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>News Website</title>
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a class="logo cursor" id="logo">
+                <img src="images/news-logo.png" alt="news-logo">
+            </a>
+            <div class="nav-items">
+                <ul class="flex">
+                    <li class="nav-list-item cursor" id="technology" onclick="fetchNavNews('technology')">Technology</li>
+                    <li class="nav-list-item cursor" onclick="fetchNavNews('finance')" id="finance">Finance</li>
+                    <li class="nav-list-item cursor" 
+                    onclick="fetchNavNews('cricket')" id="cricket">Cricket</li>
+                </ul>
+            </div>
+
+            <div class="search-bar">
+                <input id="search-text" class="search-input" type="text" placeholder="e.g science">
+                <button class="search-btn" id="search-btn">Search</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="card-container container" id="card-container">
+            
+        </div>
+    </main>
+
+    <template id="card-template">
+        <div class="card flex">
+            <div class="card-image">
+                <img id='card-image' src="https://via.placeholder.com/400x300" alt="card-image">
+            </div>
+            <div class="card-content">
+                <h2 class="card-title" id="card-title">Card Title</h2>
+                <h4 class="card-source" id="card-source">Source</h4>
+                <p class="card-description" id="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tempore porro vero impedit consequatur eius veniam sequi facere corrupti debitis sapiente nemo perspiciatis voluptatibus incidunt inventore, consequuntur autem eveniet quo, at quia, suscipit eaque fuga id obcaecati? Et, deleniti sequi repellendus aspernatur id accusantium doloremque quia nostrum voluptatem iusto reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.</p>
+                <button class="read-more" id="read-more">Read More</button>
+            </div>
+        </div>
+    </template>
+    
+</body>
+</html>
