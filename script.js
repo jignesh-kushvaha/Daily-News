@@ -1,12 +1,12 @@
 const API = "6dd4fc07f0874a56a54816e0bef2c2cc";
 const URL = "https://newsapi.org/v2/everything?q=";
-const TOP_HEADLINE_UTL = "https://newsapi.org/v2/top-headlines?country="
+const TechAndWebNews = "https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com"
 const country = "in";
 
 window.addEventListener("load",(e)=> fetchHeadlines())
 
 function fetchHeadlines(){
-    fetch(`${TOP_HEADLINE_UTL}${country}&apiKey=${API}`)
+    fetch(`${TechAndWebNews}&apiKey=${API}`)
    .then(res => res.json())
    .then(data => displayNews(data.articles))
    .catch(err => console.log(err))
@@ -27,7 +27,7 @@ function displayNews(articles){
     cardContainer.innerHTML = "";
 
     articles.forEach(article => {
-        if(!article.urlToImage) return;
+        // if(!article.urlToImage) return;
 
         const clone = cardTemplate.content.cloneNode(true);
         clone.querySelector("#card-image").src = article.urlToImage;
